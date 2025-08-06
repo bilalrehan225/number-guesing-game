@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVA-SCRIPT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        #foot{
+            background-image: url('https://wallpapers.com/images/hd/victory-background-omqfjf7fwnkdrj8g.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+        }
+
+        #h1 {
+            text-align: center;
+            padding: 1rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            background: linear-gradient(90deg, rgb(0, 255, 0), green);
+            color: white;
+            font-size: 30px;
+            text-transform: capitalize;
+        }
+
+        .btns {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            min-height: 80vh;
+            align-items: center;
+            gap: 120px;
+        }
+
+        .btn {
+            padding: 20px 40px;
+            border-radius: 20px;
+            border: none;
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 17px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .yes {
+            background-color: darkblue;
+        }
+
+        .yes:hover {
+            background-color: rgb(0, 0, 223);
+        }
+
+        .yes:active {
+            background-color: rgb(104, 104, 255);
+        }
+
+        .no {
+            background-color: rgb(185, 0, 0);
+        }
+
+        .no:hover {
+            background-color: rgb(211, 0, 0);
+        }
+
+        .no:active {
+            background-color: rgb(255, 65, 65);
+        }
+
+        .second {
+            display: none;
+        }
+
+        .body2 {
+            display: flex;
+            flex-direction: row;
+            min-height: 60vh;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #Myh1 {
+            text-align: center;
+            background-color: rgb(0, 153, 255);
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 28px;
+            padding: 1.5rem 1rem;
+        }
+
+
+        #Myh2 {
+            text-align: center;
+            background: linear-gradient(90deg, rgb(123, 255, 123), rgb(0, 252, 0));
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 1.cm;
+            line-height: 1cm;
+            padding: 1rem;
+        }
+
+        .start {
+            cursor: pointer;
+            padding: 20px 50px;
+            border-radius: 20px;
+            border: none;
+            background-color: rgb(220, 20, 60);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 17px;
+            color: white;
+            font-weight: bold
+        }
+
+        .start:hover {
+            background-color: rgb(182, 1, 37);
+        }
+
+        .start:active {
+            background-color: rgb(255, 109, 138);
+        }
+
+        #thish1 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 30px;
+            text-align: center;
+            background-color: darkslateblue;
+            color: white;
+            padding: 1rem 1.5rem;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        #thish2 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgb(121, 2, 218);
+            font-weight: lighter;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            margin-top: 1cm;
+            padding: 1rem 1rem;
+            display: inline-block;
+        }
+
+        .enter {
+            padding: 15px 40px;
+            border-radius: 20px;
+            border: 0.5px solid black;
+            text-align: left;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20px;
+        }
+
+        .enter:hover {
+            font-size: 22px;
+            background-color: rgb(240, 240, 240);
+        }
+
+        .sumbit {
+            padding: 10px 15px;
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(1, 1, 148);
+            font-size: 17px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+        }
+
+        .sumbit:hover {
+            background-color: rgb(0, 0, 212);
+        }
+
+        .sumbit:active {
+            background-color: rgb(102, 102, 255);
+        }
+
+        .image {
+            transform: rotate(90deg);
+        }
+
+        #foot {
+            display: none;
+        }
+        main{
+            display: none;
+        }
+        #numberpicker {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: white;
+            font-size: 15px;
+            cursor: pointer;
+            margin-bottom: 0.1cm;
+        }
+        #a{
+            text-align: center;
+            background-color: darkgreen;
+            color: whitesmoke;
+            border: 0.5px solid green;
+            font-size: 29px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 1rem 1.5rem;
+        }
+        .attempts{
+           display: inline-block;
+            font-size: 22px;
+            font-family: sans-serif;
+            font-weight: bold;
+            color: white;
+            margin-top: 3cm;
+            background-color: rgb(173, 216, 57);
+            padding: 1.5rem 2rem;
+            border: none;
+            border-radius: 30px;
+        }
+        .footer{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 8cm;
+            color: white;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <section class="first">
+            <div class="heading">
+                <h1 id="h1">Do you want to continue the number guesing game</h1>
+            </div>
+            <div class="body">
+                <div class="btns">
+                    <button class="btn yes" id="yes">YES</button>
+                    <button class="btn no" id="no">NO</button>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <section class="second" id="second">
+        <div class="heading">
+            <h1 id="Myh1">You Have To Guess My Number</h1>
+            <br><br><br>
+            <h2 id="Myh2">Are You Ready</h2>
+        </div>
+        <div class="body2">
+            <div class="btns2">
+                <button class="start" id="start">START</button>
+            </div>
+        </div>
+    </section>
+
+    <main id="main">
+        <section class="third" id="third">
+            <div class="heading">
+                <h1 id="thish1">Guess my number 0 - 99 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="numberpicker">PICK A
+                        NUMBER</button></h1>
+                <center>
+                    <h2 id="thish2">I will also give you some hint</h2>
+                </center>
+                <br><br><br><br><br>
+            </div>
+            <center><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBylmPJC0LEq9H2tSy-te43OyPDnlcECHd6Xe1k8g9fxSsllE1YjsY_rrHOo5AhaL9XOo&usqp=CAU"
+                    alt="down arrow.png" class="image" width="100"></center>
+            <br><br><br>
+            <center> <input type="text" name="enter" id="enter" class="enter" placeholder="ENTER NUMBER"></center>
+            <br><br><br>
+            <center><button type="submit" class="sumbit" id="sumbit">SUMBIT</button></center>
+        </section>
+    </main>
+
+    <footer id="foot">
+        <section class="victory">
+            <div class="heading">
+                <h1 id="a">
+                    Congratulations !!! You Guess The Number Correct....
+                </h1>
+            </div>
+           <center><div id="attemtps" class="attempts">You Take 3 Attempts To Guess The Number</div></center> 
+            <div class="footer" id="footer">ATTEMPT : 3 </div>
+        </section>
+    </footer>
+
+
+    <script>
+        let userattempt = 0;
+        let numberpickvalue = 0;
+        let numberpicker = document.getElementById("numberpicker");
+        let userguess;
+        let randomnum;
+        let sumbit = document.getElementById("sumbit");
+        let nope = document.getElementById("no");
+        nope.onclick = function () {
+            document.getElementById("h1").textContent = "You Are A Loser"
+            alert("BABU BHAIYA--SAYS YOU ARE A COWARD");
+            document.getElementById("yes").style.display = "none";
+            document.getElementById("no").style.display = "none";
+        }
+        let yep = document.getElementById("yes");
+        yep.onclick = function () {
+            document.getElementById("header").style.display = "none";
+            document.getElementById("second").style.display = "block";
+        }
+        let ready = document.getElementById("start").onclick = function () {
+            document.getElementById("second").style.display = "none";
+            document.getElementById("main").style.display = "block"
+        }
+
+        numberpicker.onclick = function () {
+            numberpickvalue = 1;
+            randomnum = Math.floor(Math.random() * 100);
+            document.getElementById("numberpicker").style.display = "none";
+            document.getElementById("thish1").textContent = "Picking A Number......."
+            setTimeout(() => {
+                document.getElementById("thish1").textContent = "NUMBER PICKED!!!..."
+            }, 2600);
+        }
+
+        sumbit.onclick = function () {
+            userattempt ++;
+            console.log(userattempt);
+            userguess = document.getElementById("enter").value;
+            userguess = Number(userguess);
+            console.log(userguess);
+            if (numberpickvalue == 1) {
+                document.getElementById("thish2").textContent = `I will also give you some hint `;
+
+            }
+            else if (numberpickvalue == 0) {
+                document.getElementById("thish2").textContent = `First Pick A Number`;
+            }
+            if (userguess > 100) {
+                document.getElementById("thish2").textContent = `YOU CANNOT ENTER THE NUMBER ABOVE 100`;
+            }
+            else if (userguess < 0) {
+                document.getElementById("thish2").textContent = `YOU CANNOT ENTER THE NUMBER BELOW 0`;
+
+            }
+            else if (userguess < randomnum) {
+                document.getElementById("thish2").textContent = `THE NUMBER IS GREATER THAN ${userguess}`;
+            }
+            else if (userguess > randomnum) {
+                document.getElementById("thish2").textContent = `THE NUMBER IS LESSER THAN ${userguess}`;
+            }
+            else if (userguess == randomnum) {
+                document.getElementById("main").style.display = "none";
+                document.getElementById("foot").style.display = "block";
+                document.getElementById("attemtps").textContent = `You Take ${userattempt} Attempts To Guess The Number`;
+                document.getElementById("footer").textContent = `ATTEMPT : ${userattempt}`;
+            }
+        }
+    </script>
+</body>
+
+</html>
