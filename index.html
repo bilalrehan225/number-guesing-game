@@ -335,15 +335,14 @@
             }, 2600);
         }
 
-        sumbit.onclick = function () {
-            userattempt ++;
-            console.log(userattempt);
+        sumbit.onclick = function () {            
             userguess = document.getElementById("enter").value;
             userguess = Number(userguess);
             console.log(userguess);
             if (numberpickvalue == 1) {
                 document.getElementById("thish2").textContent = `I will also give you some hint `;
-
+                userattempt ++;
+                console.log(userattempt);
             }
             else if (numberpickvalue == 0) {
                 document.getElementById("thish2").textContent = `First Pick A Number`;
@@ -372,3 +371,4 @@
 </body>
 
 </html>
+
